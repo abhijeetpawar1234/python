@@ -5,7 +5,7 @@ csv_file = 'data/store_Data.csv'
 
 def show_mobile():
     '''
-    Reads the CSV file and prints product IDs of all mobiles.
+    Reads the CSV file and prints all mobiles.
     '''
     try:
         data = pd.read_csv(csv_file)
@@ -79,6 +79,7 @@ def search_mob(name):
             print(f"Quantity in Stock: {row['quantity_in_stock']}")
             found = True
             break
+
 
         if not found:
             print(f"No mobile found with name '{name}'.") 
