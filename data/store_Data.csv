@@ -1,5 +1,5 @@
 product_id,product_name,quantity_in_stock,supplier_name,supplier_contact,total_cost
-1001,iPhone 12,50,Apple Inc.,support@apple.com,39999.50
+1001,iPhone 12,90,Apple Inc.,support@apple.com,10000
 2001,Samsung Galaxy S21,15,Samsung Electronics,support@samsung.com,20999.70
 3001,Google Pixel 5a,8,Google LLC,support@google.com,8999.80
 1004,Micromax,10,Shanatannu,7853782553,29999

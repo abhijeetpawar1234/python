@@ -66,7 +66,24 @@ def generate_report():
     print(f"Total number of mobiles: {total_mobiles}")
     print(f"Total quantity in stock: {total_stock}")
     print(f"Average total cost: {average_cost:.2f}")
+
+
+def search_mob(name):
+    data = pd.read_csv(csv_file)
+    '''
+    search mobile by name
+    '''
+    for index, row in data.iterrows():
+        if name == row['product_name']:
+            print(f"Product Name: {row['product_name']}")
+            print(f"Quantity in Stock: {row['quantity_in_stock']}")
+            found = True
+            break
+
+        if not found:
+            print(f"No mobile found with name '{name}'.") 
     
+
 
 
 
@@ -74,4 +91,5 @@ if __name__ == "__main__":
     calculate_average_mobile_cost()
     generate_report()
     show_mobile()
+    search_mob()
 

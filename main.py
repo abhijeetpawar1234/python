@@ -1,5 +1,5 @@
 from Crud import add_mobile, view_mobile, update_mob, delete_mob
-from data_Science import calculate_average_mobile_cost , generate_report , show_mobile
+from data_Science import calculate_average_mobile_cost , generate_report , show_mobile ,search_mob
  
 
 def main():
@@ -12,7 +12,10 @@ def main():
         print("5. Show Report")
         print("6. Average cost of mobiles")
         print("7. show all mobile")
-        print("8. Exit ")
+        print("8. search mobile ")
+        print("9. exit ")
+
+
 
         ch = input("Enter the Choice :: ")
 
@@ -65,8 +68,12 @@ def main():
             print(show_mobile())
 
 
-
         elif ch == '8':
+            x = input("enter the mobile name to search ::")
+            search_mob(x)
+
+
+        elif ch == '9':
             print("Exiting...")
             break
 
