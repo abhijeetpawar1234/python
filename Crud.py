@@ -100,8 +100,6 @@ def delete_mob(product_id):
 
 
 
-
-
     
               
     

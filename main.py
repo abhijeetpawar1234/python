@@ -1,5 +1,5 @@
 from Crud import add_mobile, view_mobile, update_mob, delete_mob
-from data_Science import generate_report
+from data_Science import calculate_average_mobile_cost , generate_report , show_mobile
  
 
 def main():
@@ -18,13 +18,13 @@ def main():
             try:
                 id = input("Enter the product id: ")
                 name = input("Enter the product Name: ")
-                quantity_in_stock = int(input("Enter quantity in stock: "))
+                quantity_in_stock = input("Enter quantity in stock: ")
                 supplier_name = input("Enter the supplier name: ")
                 supplier_contact = input("Enter the supplier contact: ")
-                total_cost = int(input("Enter the total cost: "))
+                total_cost = input("Enter the total cost: ")
                 add_mobile(id, name, quantity_in_stock, supplier_name, supplier_contact, total_cost)
             except ValueError:
-                print("Invalid input. Please enter numeric values for  quantity in stock, and total cost.")
+                print("Invalid input.")
         
         elif ch == '2':
             view_mobile()
@@ -50,13 +50,24 @@ def main():
 
         elif ch == '5':
             # Add functionality for showing reports
-            
             print("Showing reports...")
             generate_report()
+            
 
         elif ch == '6':
+            average_cost = calculate_average_mobile_cost()
+            if average_cost is not None:
+                print(f"Average cost of mobiles: {average_cost:.2f}")
+        
+        elif ch == '7':
+            print(show_mobile())
+
+
+
+        elif ch == '8':
             print("Exiting...")
             break
+
 
         else:
             print("Invalid choice. Please try again.")
