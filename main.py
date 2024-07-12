@@ -1,5 +1,5 @@
 from Crud import add_mobile, view_mobile, update_mob, delete_mob
-
+from data_Science import generate_report
  
 
 def main():
@@ -52,6 +52,7 @@ def main():
             # Add functionality for showing reports
             
             print("Showing reports...")
+            generate_report()
 
         elif ch == '6':
             print("Exiting...")
