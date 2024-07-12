@@ -10,7 +10,9 @@ def main():
         print("3. Update Data")
         print("4. Delete Existing")
         print("5. Show Report")
-        print("6. Exit")
+        print("6. Average cost of mobiles")
+        print("7. show all mobile")
+        print("8. Exit ")
 
         ch = input("Enter the Choice :: ")
 
